@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "AlgorithmSelector"
-version = "1.0.0"
+version = "1.1.0"
 description = "A collection of various algorithms and data structures"
 authors = ["thomasthaddeus <thaddeus.r.thomas@gmail.com>"]
 readme = "README.md"
