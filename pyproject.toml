@@ -5,7 +5,7 @@ description = "A collection of various algorithms and data structures"
 authors = ["thomasthaddeus <thaddeus.r.thomas@gmail.com>"]
 readme = "README.md"
 packages = [
-    { from = "src", include = "src" }
+    { from = "src", include = "*" }
 ]
 
 [tool.poetry.dependencies]
