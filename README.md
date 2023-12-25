@@ -1,6 +1,6 @@
 # Algorithm Selector
 
-[![Publish to PyPI](https://github.com/thomasthaddeus/AlgorithmSelector/actions/workflows/workflow.yml/badge.svg)](https://github.com/thomasthaddeus/AlgorithmSelector/actions/workflows/workflow.yml)
+[![Publish to PyPI](https://github.com/thomasthaddeus/AlgorithmSelector/actions/workflows/workflow.yml/badge.svg)](https://github.com/thomasthaddeus/AlgorithmSelector/actions/workflows/workflow.yml) [![PyPI](https://img.shields.io/pypi/v/AlgorithmSelector.svg)](https://pypi.org/project/AlgorithmSelector/)
 
 ## Overview
 
