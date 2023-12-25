@@ -1,4 +1,7 @@
-# Algorithm Repository
+# Algorithm Selector
+
+[![Publish to PyPI](https://github.com/thomasthaddeus/AlgorithmSelector/actions/workflows/workflow.yml/badge.svg)](https://github.com/thomasthaddeus/AlgorithmSelector/actions/workflows/workflow.yml) [![PyPI](https://img.shields.io/pypi/v/AlgorithmSelector.svg)](https://pypi.org/project/AlgorithmSelector/) ![License](https://img.shields.io/github/license/thomasthaddeus/AlgorithmSelector.svg) ![Python Version](https://img.shields.io/pypi/pyversions/AlgorithmSelector.svg) ![Code Size](https://img.shields.io/github/languages/code-size/thomasthaddeus/AlgorithmSelector.svg) ![Last Commit](https://img.shields.io/github/last-commit/thomasthaddeus/AlgorithmSelector.svg) ![Issues](https://img.shields.io/github/issues-raw/thomasthaddeus/AlgorithmSelector.svg) ![Pull Requests](https://img.shields.io/github/issues-pr/thomasthaddeus/AlgorithmSelector.svg)
+<!-- ![Build Status](https://img.shields.io/travis/com/thomasthaddeus/AlgorithmSelector/main.svg) ![Coverage](https://img.shields.io/codecov/c/github/thomasthaddeus/AlgorithmSelector.svg) -->
 
 ## Overview
 
