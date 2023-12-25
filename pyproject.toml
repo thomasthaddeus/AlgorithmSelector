@@ -19,4 +19,4 @@ repository = "https://github.com/thomasthaddeus/my-algorithm-project"
 dev = ["check-manifest", "twine"]
 
 [tool.poetry.packages]
-include = [{ from = "src", include = ["."] }]
+include = [{ from = "src", include = ["*"] }]
