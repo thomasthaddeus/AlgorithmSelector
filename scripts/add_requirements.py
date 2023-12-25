@@ -33,7 +33,7 @@ def write_requirements(libraries, filename='requirements.txt'):
             file.write(lib + '\n')
 
 # Specify the start directory, e.g., 'src'
-st_dir = 'src'
+st_dir = '../src'
 py_files = find_python_files(st_dir)
 external_libraries = get_external_libraries(py_files)
 write_requirements(external_libraries)
