@@ -4,6 +4,9 @@ version = "1.0.0"
 description = "A collection of various algorithms and data structures"
 authors = ["thomasthaddeus <thaddeus.r.thomas@gmail.com>"]
 readme = "README.md"
+packages = [
+    { from = "src", include = "src" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -17,6 +20,3 @@ repository = "https://github.com/thomasthaddeus/AlgorithmSelector"
 
 [tool.poetry.extras_require]
 dev = ["check-manifest", "twine"]
-
-[tool.poetry.packages]
-include = [{ from = "src", include = ["*"] }]
