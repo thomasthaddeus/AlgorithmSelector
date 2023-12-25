@@ -1,14 +1,19 @@
 [tool.poetry]
 name = "my-algorithm-project"
-version = "0.1.0"
-description = ""
+version = "1.0.0"
+description = "A collection of various algorithms and data structures"
 authors = ["thomasthaddeus <thaddeus.r.thomas@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
 
-
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+repository = "https://github.com/thomasthaddeus/my-algorithm-project"
+
+[tool.poetry.extras_require]
+dev = ["check-manifest", "twine"]
