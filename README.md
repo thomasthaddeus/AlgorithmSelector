@@ -1,4 +1,6 @@
-# Algorithm Repository
+# Algorithm Selector
+
+[![Publish to PyPI](https://github.com/thomasthaddeus/AlgorithmSelector/actions/workflows/workflow.yml/badge.svg)](https://github.com/thomasthaddeus/AlgorithmSelector/actions/workflows/workflow.yml)
 
 ## Overview
 
