@@ -24,7 +24,7 @@ This repository contains a comprehensive collection of algorithms across various
 To get started with this repository, clone it to your local machine using:
 
 ```bash
-git clone https://example.com/algorithm-repository.git
+git clone https://github.com/thomasthaddeus/AlgorithmSelector.git
 cd algorithm-repository
 ```
 
