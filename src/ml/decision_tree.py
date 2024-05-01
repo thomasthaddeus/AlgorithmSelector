@@ -225,14 +225,3 @@ class DecisionTree:
             for data, label in zip(data_subsets, label_subsets)
         ]
         return self.decision_node(question, branches, value)
-
-
-# Sample usage
-dt = DecisionTree()
-cars = dt.make_cars("car.data") # No value for filename defaults to "car.data"
-random.shuffle(cars)
-cars = cars[:1000]
-car_data = [x[:-1] for x in cars]
-car_labels = [x[-1] for x in cars]
-tree = dt.build_tree(car_data, car_labels)
-dt.print_tree(tree)
