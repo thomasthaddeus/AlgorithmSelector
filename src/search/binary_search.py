@@ -1,3 +1,18 @@
+"""
+Binary Search algorithm
+
+# Example usage
+arr = [3, 4, 5, 6, 7, 8, 9]
+bs = BinarySearch(arr)
+target = 5
+result = bs.search(target)
+
+if result != -1:
+    print(f"Element {target} is present at index {result}.")
+else:
+    print(f"Element {target} is not present in the array.")
+"""
+
 class BinarySearch:
     def __init__(self, arr):
         self.arr = sorted(arr)  # Ensuring the array is sorted
@@ -18,14 +33,3 @@ class BinarySearch:
                 right = mid - 1
 
         return -1  # Target not found
-
-# Example usage
-arr = [3, 4, 5, 6, 7, 8, 9]
-bs = BinarySearch(arr)
-target = 5
-result = bs.search(target)
-
-if result != -1:
-    print(f"Element {target} is present at index {result}.")
-else:
-    print(f"Element {target} is not present in the array.")
