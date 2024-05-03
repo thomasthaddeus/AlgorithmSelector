@@ -1,3 +1,23 @@
+"""data_structures/heap.py
+_summary_
+
+_extended_summary_
+
+Returns:
+    _type_: _description_
+
+Ex:
+min_heap = MinHeap()
+min_heap.insert_key(3)
+min_heap.insert_key(2)
+min_heap.insert_key(15)
+min_heap.insert_key(5)
+min_heap.insert_key(4)
+min_heap.insert_key(45)
+
+print("Extracted minimum:", min_heap.extract_min())
+"""
+
 class MinHeap:
     def __init__(self):
         self.heap = []
@@ -44,14 +64,3 @@ class MinHeap:
         self.heap[0] = self.heap.pop()
         self.min_heapify(0)
         return root
-
-# Example usage
-min_heap = MinHeap()
-min_heap.insert_key(3)
-min_heap.insert_key(2)
-min_heap.insert_key(15)
-min_heap.insert_key(5)
-min_heap.insert_key(4)
-min_heap.insert_key(45)
-
-print("Extracted minimum:", min_heap.extract_min())

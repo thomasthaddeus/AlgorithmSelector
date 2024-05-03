@@ -1,3 +1,12 @@
+"""binary_search_tree.py
+_summary_
+
+_extended_summary_
+
+Returns:
+    _type_: _description_
+"""
+
 class TreeNode:
     def __init__(self, key):
         self.key = key
