@@ -1,6 +1,21 @@
 import numpy as np
 
 class LinearRegression:
+    """class for utilizing a linear regression algorithm
+    
+    # # Example usage
+    # X = np.array([0, 1, 2, 3, 4, 5])
+    # y = np.array([0, 2, 4, 6, 8, 10])  # Example data
+    
+    # model = LinearRegression()
+    # model.fit(X, y)
+    # predictions = model.predict(X)
+    
+    # print("Coefficients:", model.coefficients)
+    # print("Intercept:", model.intercept)
+    # print("Predictions:", predictions)
+    """
+    
     def __init__(self):
         self.coefficients = None
         self.intercept = None
@@ -20,15 +35,3 @@ class LinearRegression:
         if len(X.shape) == 1:
             X = X.reshape(-1, 1)
         return np.dot(X, self.coefficients) + self.intercept
-
-# Example usage
-X = np.array([0, 1, 2, 3, 4, 5])
-y = np.array([0, 2, 4, 6, 8, 10])  # Example data
-
-model = LinearRegression()
-model.fit(X, y)
-predictions = model.predict(X)
-
-print("Coefficients:", model.coefficients)
-print("Intercept:", model.intercept)
-print("Predictions:", predictions)

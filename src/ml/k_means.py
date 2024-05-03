@@ -2,6 +2,17 @@ import numpy as np
 import random
 
 class KMeans:
+    """
+    An implementation of the K-Means clustering algorithm.
+
+    # Example usage
+    data = np.array([[1, 2], [1, 4], [1, 0], [10, 2], [10, 4], [10, 0]])
+    kmeans = KMeans(k=2)
+    kmeans.fit(data)
+    print("Cluster centroids:", kmeans.centroids)
+    print("Predicted clusters:", kmeans.predict(data))
+    """
+    
     def __init__(self, k=2, max_iterations=100):
         self.k = k  # Number of clusters
         self.max_iterations = max_iterations  # Maximum number of iterations
@@ -50,10 +61,3 @@ class KMeans:
             cluster_idx = np.argmin(distances)
             predictions.append(cluster_idx)
         return predictions
-
-# Example usage
-data = np.array([[1, 2], [1, 4], [1, 0], [10, 2], [10, 4], [10, 0]])
-kmeans = KMeans(k=2)
-kmeans.fit(data)
-print("Cluster centroids:", kmeans.centroids)
-print("Predicted clusters:", kmeans.predict(data))

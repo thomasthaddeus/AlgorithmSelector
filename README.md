@@ -1,7 +1,6 @@
 # Algorithm Selector
 
-[![Publish to PyPI](https://github.com/thomasthaddeus/AlgorithmSelector/actions/workflows/workflow.yml/badge.svg)](https://github.com/thomasthaddeus/AlgorithmSelector/actions/workflows/workflow.yml) [![PyPI](https://img.shields.io/pypi/v/AlgorithmSelector.svg)](https://pypi.org/project/AlgorithmSelector/) ![License](https://img.shields.io/github/license/thomasthaddeus/AlgorithmSelector.svg) ![Python Version](https://img.shields.io/pypi/pyversions/AlgorithmSelector.svg) ![Code Size](https://img.shields.io/github/languages/code-size/thomasthaddeus/AlgorithmSelector.svg) ![Last Commit](https://img.shields.io/github/last-commit/thomasthaddeus/AlgorithmSelector.svg) ![Issues](https://img.shields.io/github/issues-raw/thomasthaddeus/AlgorithmSelector.svg) ![Pull Requests](https://img.shields.io/github/issues-pr/thomasthaddeus/AlgorithmSelector.svg)
-<!-- ![Build Status](https://img.shields.io/travis/com/thomasthaddeus/AlgorithmSelector/main.svg) ![Coverage](https://img.shields.io/codecov/c/github/thomasthaddeus/AlgorithmSelector.svg) -->
+[![Publish to PyPI][shield1]](https://github.com/thomasthaddeus/AlgorithmSelector/actions/workflows/workflow.yml) [![PyPI][shield2]](https://pypi.org/project/AlgorithmSelector/) ![License][shield3] ![Python Version][shield4] ![Code Size][shield5] ![Last Commit][shield6] ![Issues][shield7] ![Pull Requests][shield8] ![Build Status][shield10] ![Coverage][shield9]
 
 ## Overview
 
@@ -23,31 +22,31 @@ This repository contains a comprehensive collection of algorithms across various
 
 To get started with this repository, clone it to your local machine using:
 
-```bash
-git clone https://example.com/algorithm-repository.git
-cd algorithm-repository
-```
+  ```bash
+  git clone https://github.com/thomasthaddeus/AlgorithmSelector.git
+  cd algorithm-repository
+  ```
 
 Install the required dependencies:
 
-```bash
-pip install -r requirements.txt
-```
+  ```bash
+  pip install -r requirements.txt
+  ```
 
 ## Usage
 
 Each algorithm is encapsulated in its own class and can be used independently. Here's an example of how to use an algorithm from the repository:
 
-```python
-from src.data_structures.binary_search_tree import BinarySearchTree
-
-# Example usage
-bst = BinarySearchTree()
-bst.insert(3)
-bst.insert(1)
-bst.insert(4)
-print(bst.search(1))  # Output: True or False
-```
+  ```python
+  from src.data_structures.binary_search_tree import BinarySearchTree
+  
+  # Example usage
+  bst = BinarySearchTree()
+  bst.insert(3)
+  bst.insert(1)
+  bst.insert(4)
+  print(bst.search(1))  # Output: True or False
+  ```
 
 ## Directory Structure
 
@@ -68,9 +67,9 @@ The repository is organized as follows:
 
 To run the tests, navigate to the root directory of the project and run:
 
-```bash
-python -m unittest discover -s tests
-```
+  ```bash
+  python -m unittest discover -s tests
+  ```
 
 ## Contributing
 
@@ -85,4 +84,16 @@ Please ensure your code adheres to the existing style conventions and add releva
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE.txt).
+This project is licensed under the [MIT License](LICENSE).
+
+<!-- Links in document -->
+[shield1]: <https://github.com/thomasthaddeus/AlgorithmSelector/actions/workflows/workflow.yml/badge.svg> "Publish to PyPi Status Shield"
+[shield2]: <https://img.shields.io/pypi/v/AlgorithmSelector.svg> "Version of package on PyPI"
+[shield3]: <https://img.shields.io/github/license/thomasthaddeus/AlgorithmSelector.svg> "LICENSE Type"
+[shield4]: <https://img.shields.io/pypi/pyversions/AlgorithmSelector.svg> "Python versions supported"
+[shield5]: <https://img.shields.io/github/languages/code-size/thomasthaddeus/AlgorithmSelector.svg> "Size of the package on PyPI"
+[shield6]: <https://img.shields.io/github/last-commit/thomasthaddeus/AlgorithmSelector.svg> "Time of last commit to the repository"
+[shield7]: <https://img.shields.io/github/issues-raw/thomasthaddeus/AlgorithmSelector.svg> "Open issues"
+[shield8]: <https://img.shields.io/github/issues-pr/thomasthaddeus/AlgorithmSelector.svg> "Open pull requests"
+[shield9]: <https://img.shields.io/codecov/c/github/thomasthaddeus/AlgorithmSelector.svg> "Codecov status"
+[shield10]: <https://img.shields.io/travis/com/thomasthaddeus/AlgorithmSelector/main.svg> "TravisCI status"
