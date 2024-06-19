@@ -6,10 +6,18 @@ _extended_summary_
 """
 
 from collections import deque
-from helper_function import process_csv_supplies
+import csv
+
+def process_csv():
+    data = []
+    with open('supplies_data.csv', 'r') as csvfile:
+        r = csv.reader(csvfile)
+        for row in r:
+            data.append(row)
+    return data
 
 # The first row is skipped since it only contains labels
-csv_data = process_csv_supplies()[1:]
+csv_data = process_csv()[1:]
 
 # Here is a sample of 2 elements in csv_data:
 # [ ['nylon', '10', 'unimportant'], ['wool', '1', 'important'] ]

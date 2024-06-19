@@ -15,6 +15,11 @@ Example:
 leaf_instance = DecisionTree.Leaf(labels, some_value)
 decision_node_instance = DecisionTree.Decision_Node(some_question, some_branches, some_value)
 
+# Sample usage
+dt = DecisionTree()
+cars = dt.make_cars("car.data") # No value for filename defaults to "car.data"
+random.shuffle(cars)
+cars = cars[:1000]
 """
 
 from collections import Counter, namedtuple

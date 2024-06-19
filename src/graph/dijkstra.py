@@ -1,47 +1,58 @@
-"""dijkstra.py
+"""graph/dijkstra.py
+This module implements Dijkstra's algorithm for finding the shortest path in a
+graph.
 
-_summary_
+Dijkstra's algorithm is a popular algorithm used to solve the single-source
+shortest path problem for a graph with non-negative edge weights. It computes
+the shortest path from a source node to a target node or all other nodes. The
+algorithm maintains a priority queue of nodes to explore and keeps track of the
+shortest distance found to each node.
 
-_extended_summary_
+The algorithm is useful when you need to determine the shortest or least costly
+path between nodes in a graph, such as in routing and logistics applications.
 
 Raises:
-    ValueError: _description_
-    ValueError: _description_
-    ValueError: _description_
-    ValueError: _description_
+    ValueError: If the input graph is not valid or if the start or end node is
+    not in the graph.
 
 Returns:
-    _type_: _description_
+    tuple: A tuple containing two dictionaries for distances and predecessors.
+
+# Example usage:
+# graph_data = {
+#     'A': {'B': 10, 'C': 20},
+#     'B': {'D': 15},
+#     'C': {'D': 30, 'E': 5},
+#     'D': {'E': 10},
+#     'E': {}
+# }
+# dijkstra = Dijkstra(graph_data)
+# dijkstra.print_path('A', 'E')
 """
 
 from typing import Dict, Optional
+from . import Graph
 
-
-class DijkstraClass:
+class Dijkstra(Graph):
     """
     Encapsulates Dijkstra's algorithm for finding the shortest path in a graph.
 
-    The graph is represented as a dictionary where each key is a node, and the value is
-    another dictionary representing the neighboring nodes and the cost to reach them.
+    The graph is represented as a dictionary where each key is a node, and the
+    value is another dictionary representing the neighboring nodes and the cost
+    to reach them.
     """
 
     def __init__(self, graph: Dict[str, Dict[str, int]]):
         """
-        Initializes the DijkstraClass with a given graph.
+        Initializes the Dijkstra class with a given graph.
 
         Args:
-            graph (Dict[str, Dict[str, int]]): The graph in which to find the shortest path.
+            graph: The graph in which to find the shortest path.
 
         Raises:
             ValueError: If the input graph is not valid.
         """
-        if not isinstance(graph, Dict):
-            raise ValueError("Input graph must be a dictionary.")
-
-        for node, edges in graph.items():
-            if not isinstance(node, str) or not isinstance(edges, Dict):
-                raise ValueError("Graph must be a dictionary of dictionaries.")
-
+        super().__init__(vertices=list(graph.keys()))
         self.graph = graph
         self.infinity = float("inf")
         self.costs = {}
@@ -50,10 +61,11 @@ class DijkstraClass:
 
     def initial_costs_parents(self, start: str):
         """
-        Initializes the costs and parents dictionaries for the start of the algorithm.
+        Initializes the costs and parents dictionaries for the start of the
+        algorithm.
 
         Args:
-            start (str): The node from which to start the search.
+            start: The node from which to start the search.
 
         Raises:
             ValueError: If the start node is not in the graph.
@@ -70,10 +82,11 @@ class DijkstraClass:
         Finds the unprocessed node with the lowest known cost.
 
         Args:
-            costs (Dict[str, int]): A dictionary of the current cost to reach each node.
+            costs: A dictionary of the current cost to reach each node.
 
         Returns:
-            Optional[str]: The unprocessed node with the lowest known cost, or None.
+            Optional[str]: The unprocessed node with the lowest known cost, or
+            None.
         """
         lowest_cost = self.infinity
         lowest_cost_node = None
@@ -87,8 +100,8 @@ class DijkstraClass:
         Applies Dijkstra's algorithm to find the shortest path in the graph.
 
         Args:
-            start (str): The node from which to start the search.
-            end (str): The node to which to find the path.
+            start: The node from which to start the search.
+            end: The node to which to find the path.
 
         Raises:
             ValueError: If the start or end node is not in the graph.
@@ -112,8 +125,8 @@ class DijkstraClass:
         Prints the shortest path from start node to end node.
 
         Args:
-            start (str): The start node of the path.
-            end (str): The end node of the path.
+            start: The start node of the path.
+            end: The end node of the path.
         """
         self.find_shortest_path(start, end)
         path, node = [], end

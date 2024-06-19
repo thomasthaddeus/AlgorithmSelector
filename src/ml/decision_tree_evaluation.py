@@ -1,5 +1,5 @@
 """
-loaded a modified version of FiveThirtyEight’s Candy Power Ranking data. Here, we have a rating column that’s binary and indicates whether or not a candy had a winning percentage >= 50% (1) or not (0). Using the rating column as the target variable and the rest of the columns (barring winpercent and competitorname) as the predictor variables, we’ve trained and tested a decision tree model. Calculate the following characteristics of this classifier:
+loaded a modified version of FiveThirtyEight's Candy Power Ranking data. Here, we have a rating column that's binary and indicates whether or not a candy had a winning percentage >= 50% (1) or not (0). Using the rating column as the target variable and the rest of the columns (barring winpercent and competitorname) as the predictor variables, we've trained and tested a decision tree model. Calculate the following characteristics of this classifier:
 
 Depth of the decision tree and save your answer as depth_dtree
 Precision score on test data and save your answer as precision_dtree
@@ -41,4 +41,3 @@ print(f'Precision score on test data: {precision_dtree}')
 # Get the F1 score on the test data
 f1_dtree = f1_score(y_test, y_pred)
 print(f'F1 score on test data: {f1_dtree}')
-

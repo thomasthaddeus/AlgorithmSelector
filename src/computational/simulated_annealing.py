@@ -1,8 +1,34 @@
+"""
+_summary_
+
+_extended_summary_
+
+Returns:
+    _type_: _description_
+"""
+
 import random
 import math
 
+
 class SimulatedAnnealing:
+    """
+     _summary_
+
+    _extended_summary_
+    """
+
     def __init__(self, initial_temp, cooling_rate, objective_function):
+        """
+        __init__ _summary_
+
+        _extended_summary_
+
+        Args:
+            initial_temp (_type_): _description_
+            cooling_rate (_type_): _description_
+            objective_function (_type_): _description_
+        """
         self.initial_temp = initial_temp
         self.cooling_rate = cooling_rate
         self.objective_function = objective_function
@@ -25,7 +51,10 @@ class SimulatedAnnealing:
             new_state = self.neighbor(current_state)
             new_energy = self.objective_function(new_state)
 
-            if self.acceptance_probability(current_energy, new_energy, current_temp) > random.random():
+            if (
+                self.acceptance_probability(current_energy, new_energy, current_temp)
+                > random.random()
+            ):
                 current_state = new_state
                 current_energy = new_energy
 
@@ -61,18 +90,24 @@ class SimulatedAnnealing:
         else:
             return math.exp((current_energy - new_energy) / temperature)
 
+
 # Example Usage:
 # Define an example objective function
 def objective_function(state):
     # Example: Optimization of a simple quadratic function
-    return state ** 2
+    return state**2
+
 
 # Initialize the Simulated Annealing solver
-sa_solver = SimulatedAnnealing(initial_temp=10000, cooling_rate=0.003, objective_function=objective_function)
+sa_solver = SimulatedAnnealing(
+    initial_temp=10000, cooling_rate=0.003, objective_function=objective_function
+)
 
 # Initial state (solution)
 initial_state = 5
 
 # Perform the simulated annealing optimization
 optimal_state = sa_solver.anneal(initial_state)
-print(f"Optimal state found: {optimal_state}, Objective function value: {objective_function(optimal_state)}")
+print(
+    f"Optimal state found: {optimal_state}, Objective function value: {objective_function(optimal_state)}"
+)

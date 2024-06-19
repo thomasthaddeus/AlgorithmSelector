@@ -1,8 +1,47 @@
+"""computer_vision/hough_transform.py
+_summary_
+
+_extended_summary_
+
+Returns:
+    _type_: _description_
+
+Ex:
+# Read an image
+image = cv2.imread('path_to_your_image.jpg')
+
+# Initialize the Hough Line Detector
+detector = HoughLineDetector(rho=1, theta=np.pi/180, threshold=100)
+
+# Detect lines
+lined_image = detector.detect_lines(image)
+
+# Display the lines
+cv2.imshow('Hough Lines', lined_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+"""
+
 import cv2
 import numpy as np
 
 class HoughLineDetector:
+    """
+     _summary_
+
+    _extended_summary_
+    """
     def __init__(self, rho, theta, threshold):
+        """
+        __init__ _summary_
+
+        _extended_summary_
+
+        Args:
+            rho (_type_): _description_
+            theta (_type_): _description_
+            threshold (_type_): _description_
+        """
         self.rho = rho  # Distance resolution of the accumulator in pixels
         self.theta = theta  # Angle resolution of the accumulator in radians
         self.threshold = threshold  # Accumulator threshold parameter
@@ -41,19 +80,3 @@ class HoughLineDetector:
                 cv2.line(image, (x1, y1), (x2, y2), (0, 0, 255), 2)
 
         return image
-
-# Example usage
-if __name__ == "__main__":
-    # Read an image
-    image = cv2.imread('path_to_your_image.jpg')
-
-    # Initialize the Hough Line Detector
-    detector = HoughLineDetector(rho=1, theta=np.pi/180, threshold=100)
-
-    # Detect lines
-    lined_image = detector.detect_lines(image)
-
-    # Display the lines
-    cv2.imshow('Hough Lines', lined_image)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()

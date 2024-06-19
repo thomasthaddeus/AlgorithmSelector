@@ -6,11 +6,19 @@ _extended_summary_
 
 Returns:
     _type_: _description_
+
+# Example usage
+sieve = PrimeSieve()
+n = 10000
+p = sieve.sieve_of_eratosthenes(n)
+sieve.logrotate()
+print(f"Total of all primes up to {n}: {PrimeSieve.total_of_primes(p)}")
 """
 
 import os
 import logging
 import time
+
 
 class PrimeSieve:
     """
@@ -21,6 +29,7 @@ class PrimeSieve:
     Returns:
         _type_: _description_
     """
+
     LOG_DIR = "logs"
     LOG_FILE = f"{LOG_DIR}/prime_calculations.log"
 
@@ -88,7 +97,11 @@ class PrimeSieve:
 
         for p in range(2, int(n**0.5) + 1):
             if prime[p]:
-                if (p > 2 and p % 2 == 0) or (p > 5 and p % 10 == 5) or self.sum_of_digits(p) in [3, 6, 9]:
+                if (
+                    (p > 2 and p % 2 == 0)
+                    or (p > 5 and p % 10 == 5)
+                    or self.sum_of_digits(p) in [3, 6, 9]
+                ):
                     prime[p] = False
                     continue
                 for i in range(p**2, n + 1, p):
@@ -127,7 +140,10 @@ class PrimeSieve:
         """
         logging.info("Calculation time: %.2f milliseconds", elapsed_time)
         logging.info("Total number of primes calculated: %d", num_primes)
-        logging.warning("Checkpoint: Calculated primes up to %d. Check the log file for details.", num_primes)
+        logging.warning(
+            "Checkpoint: Calculated primes up to %d. Check the log file for details.",
+            num_primes,
+        )
 
     @staticmethod
     def total_of_primes(primes):
@@ -141,10 +157,3 @@ class PrimeSieve:
             int: The total sum of the given list of prime numbers.
         """
         return sum(primes)
-
-# Example usage
-sieve = PrimeSieve()
-n = 10000
-p = sieve.sieve_of_eratosthenes(n)
-sieve.logrotate()
-print(f"Total of all primes up to {n}: {PrimeSieve.total_of_primes(p)}")
